@@ -360,7 +360,7 @@ body,html p {
 	grid-template-areas:
 		'Image'
 		'Content';
-	grid-template-rows: 50vh 1fr;
+	grid-template-rows: 75vh 1fr;
 	flex-basis: 0;
 	flex-grow: 1;
 }
@@ -384,7 +384,7 @@ body,html p {
 }
 
 .Testimonials video {
-	height: 50vh;
+	height: 75vh;
 	justify-self:center;
 	border-radius:15px;
 	object-fit: cover;
