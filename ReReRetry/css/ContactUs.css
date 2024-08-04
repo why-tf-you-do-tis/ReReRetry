@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body,html {
+	--BG-col:#d2b7f3;
+    --Header-Col:#edede9;
+    --Header-Height:170px;
+    --Data-Colour:#e1e0da;
+    --Info-Colour:#cfcec7;
+	--Another-Colour:#c1bfb2;
+    --Text-Padding:10px;
+    background-color:var(--BG-col);
+	display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:6px;
+    margin-right:1%;
+    margin-left:1%;
+    height:fit-content;
+    scroll-behavior: smooth;
+}
+
+body,html h2 {
+    font-family: "DM Serif Display", serif;
+}
+body,html p {
+    font-family: "Playfair Display", serif;
+}
+
+.hidden {
+    opacity:0;
+}
+
+.hiddenAnimationLeft{
+	opacity:0;
+	filter:blur(5px);
+	transform:translateX(-100%);
+	transition: all 1s ease;
+}
+
+.hiddenAnimationRight{
+	opacity:0;
+	filter:blur(5px);
+	transform:translateX(100%);
+	transition: all 1s ease;
+}
+
+
+.header {
+    position:absolute;
+    color:#edede9;
+    display:flex;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.Cont {
+    background-color:var(--Header-Col);
+    position:fixed;
+    border-radius: 15px;
+    padding: 5px 10px 2px 10px;
+    height:var(--Header-Height);
+    z-index: 10;
+    transition: all 0.5s ease;
+    margin-top: 6px;
+	width:96%;
+}
+
+
+.Logo img {
+    position:relative;
+    top:45px;
+    left:50%;
+    transform: translate(-50%, -50%);
+    height:100px;
+    width:100px;
+    transition: all 0.5s ease;
+}
+
+.LogoSide img {
+    position:relative;
+    top:45px;
+    left:40px;
+    transform: translate(-50%,-50%);
+    height:80px;
+    width:80px;
+    transition: all 0.5s ease;   
+}
+
+.ButtonBox{
+    z-index:11;
+    display:flex;
+    background-color: #1650a8    ;
+    overflow: auto;
+    scrollbar-width:none;
+    border-radius: 7px;
+    padding: 5px 10px;
+    position: absolute;
+    top: 135px;
+    left:3%;
+    transform: translate(-0%, -50%);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    width: 94%;
+    transition: all 0.5s ease;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-wrap:nowrap;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease;  
+}
+
+.ButtonBoxAlt {
+    z-index:11;
+    display:flex;
+    background-color: #1650a8;
+    overflow-x:auto;
+    scrollbar-width:none;
+    border-radius: 7px;
+    padding: 2px 5px;
+    position: absolute;
+    top: 50px;
+    left:calc(100vw - 800px);
+    transform: translate(0%, -50%);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.6);
+    transition: all 0.5s ease;
+    width:670px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    text-wrap:nowrap;
+    flex-wrap: nowrap;
+    transition: all 0.5s ease;  
+}
+.WowMain {
+    width: 290px;
+    height: 300px;
+    perspective: 1000px;
+  }
+  
+  .WowCard {
+    height: 100%;
+    border-radius: 50px;
+    background: linear-gradient(135deg, rgb(199, 50, 212) 0%, rgb(131, 8, 247) 100%);
+    transition: all 0.5s ease-in-out;
+    transform-style: preserve-3d;
+    box-shadow: rgba(5, 71, 17, 0) 40px 50px 25px -40px, rgba(5, 71, 17, 0.2) 0px 25px 25px -5px;
+  }
+  
+  .WowGlass {
+    transform-style: preserve-3d;
+    position: absolute;
+    inset: 8px;
+    border-radius: 55px;
+    border-top-right-radius: 100%;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.815) 100%);
+    /* -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
+    transform: translate3d(0px, 0px, 25px);
+    border-left: 1px solid white;
+    border-bottom: 1px solid white;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .WowText {
+    padding: 100px 60px 0px 30px;
+    transform: translate3d(0, 0, 26px);
+  }
+  
+  .WowText .title {
+    display: block;
+    color: #520089;
+    font-weight: 900;
+    font-size: 20px;
+  }
+  
+  
+  .ScottHunter {
+    padding: 10px 12px;
+    transform-style: preserve-3d;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: translate3d(0, 0, 26px);
+  }
+  
+  .ScottHunter .view-more {
+    display: flex;
+    align-items: center;
+    width: 40%;
+    justify-content: flex-end;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .ScottHunter .view-more:hover {
+    transform: translate3d(0, 0, 10px);
+  }
+  
+  .ScottHunter .view-more .view-more-button {
+    background: none;
+    border: none;
+    color: #520089;
+    font-weight: bolder;
+    font-size: 12px;
+  }
+  
+  .ScottHunter .view-more .svg {
+    fill: none;
+    stroke: #520089;
+    stroke-width: 3px;
+    max-height: 15px;
+  }
+  
+  .ScottHunter .social-buttons-container {
+    display: flex;
+    gap: 10px;
+    transform-style: preserve-3d;
+  }
+  
+  .ScottHunter .social-buttons-container .social-button {
+    width: 30px;
+    aspect-ratio: 1;
+    padding: 5px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    border: none;
+    display: grid;
+    place-content: center;
+    box-shadow: rgba(5, 71, 17, 0.5) 0px 7px 5px -5px;
+  }
+  
+  .ScottHunter .social-buttons-container .social-button:first-child {
+    transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s;
+  }
+  
+  .ScottHunter .social-buttons-container .social-button:nth-child(2) {
+    transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s;
+  }
+  
+  .ScottHunter .social-buttons-container .social-button:nth-child(3) {
+    transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s;
+  }
+  
+  .ScottHunter .social-buttons-container .social-button .svg {
+    width: 15px;
+    fill: #520089;
+  }
+  
+  .ScottHunter .social-buttons-container .social-button:hover {
+    background: black;
+  }
+  
+  .ScottHunter .social-buttons-container .social-button:hover .svg {
+    fill: white;
+  }
+  
+  .ScottHunter .social-buttons-container .social-button:active {
+    background: rgb(255, 234, 0);
+  }
+  
+  .ScottHunter .social-buttons-container .social-button:active .svg {
+    fill: black;
+  }
+  
+  .WowLogo {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-style: preserve-3d;
+  }
+  
+  .WowLogo .circle {
+    display: block;
+    position: absolute;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    box-shadow: rgba(105, 100, 111, 0.2) -10px 10px 20px 0px;
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    background: rgba(116, 0, 249, 0.2);
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .WowLogo .circle1 {
+    width: 170px;
+    transform: translate3d(0, 0, 20px);
+    top: 8px;
+    right: 8px;
+  }
+  
+  .WowLogo .circle2 {
+    width: 140px;
+    transform: translate3d(0, 0, 40px);
+    top: 10px;
+    right: 10px;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    transition-delay: 0.4s;
+  }
+  
+  .WowLogo .circle3 {
+    width: 110px;
+    transform: translate3d(0, 0, 60px);
+    top: 17px;
+    right: 17px;
+    transition-delay: 0.8s;
+  }
+  
+  .WowLogo .circle4 {
+    width: 80px;
+    transform: translate3d(0, 0, 80px);
+    top: 23px;
+    right: 23px;
+    transition-delay: 1.2s;
+  }
+  
+  .WowLogo .circle5 {
+    width: 50px;
+    transform: translate3d(0, 0, 100px);
+    top: 30px;
+    right: 30px;
+    display: grid;
+    place-content: center;
+    transition-delay: 1.6s;
+  }
+  
+  .WowLogo .circle5 .svg {
+    width: 20px;
+    fill: white;
+  }
+  
+  .WowMain:hover .WowCard {
+    transform: rotate3d(1, 1, 0, 30deg);
+    box-shadow: rgba(5, 71, 17, 0.3) 30px 50px 25px -40px, rgba(5, 71, 17, 0.1) 0px 25px 30px 0px;
+  }
+  
+  .WowMain:hover .WowCard .ScottHunter .social-buttons-container .social-button {
+    transform: translate3d(0, 0, 50px);
+    box-shadow: rgba(5, 71, 17, 0.2) -5px 20px 10px 0px;
+  }
+  
+  .WowMain:hover .WowCard .WowLogo .circle2 {
+    transform: translate3d(0, 0, 60px);
+  }
+  
+  .WowMain:hover .WowCard .WowLogo .circle3 {
+    transform: translate3d(0, 0, 80px);
+  }
+  
+  .WowMain:hover .WowCard .WowLogo .circle4 {
+    transform: translate3d(0, 0, 100px);
+  }
+  
+  .WowMain:hover .WowCard .WowLogo .circle5 {
+    transform: translate3d(0, 0, 120px);
+  }
